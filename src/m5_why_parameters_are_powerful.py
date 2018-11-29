@@ -25,8 +25,8 @@ def main():
     draw_circles(rg.Point(-200, 0))
     better_draw_circles(rg.Point(250,250), 20)
     better_draw_circles(rg.Point(-100,-50), 18)
-    even_better_draw_circles(rg.Point(-450,-150), 35)
-    even_better_draw_circles(rg.Point(360,-200), 40)
+    even_better_draw_circles(rg.Point(-450,-150), 35, 'midnight blue', 5)
+    even_better_draw_circles(rg.Point(360,-200), 40, 'orange', 15)
 
     window.update()
     window.close_on_mouse_click()
@@ -180,9 +180,9 @@ def better_draw_circles(point,increase):
 #
 ###############################################################################
 
-def even_better_draw_circles(point,inc):
+def even_better_draw_circles(point,inc,color,thick):
     turtle = rg.SimpleTurtle()
-    turtle.pen = rg.Pen('midnight blue', 4)
+    turtle.pen = rg.Pen(color, thick)
     turtle.pen_up()
     turtle.go_to(point)
     turtle.pen_down()
